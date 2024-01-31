@@ -1,0 +1,27 @@
+Показатели запасов
+
+- Национальное богатство
+- Численность занятых (безработных)
+- Кассовые остатки
+- Госдолг
+
+
+X_1 = np.random.uniform(-10, 20, (10, 20))
+    
+scaler = StandardScaler()
+scaler.fit(X_1)
+X_2 = scaler.transform(X_1)
+
+
+
+Split [0, 1, ..., num_objects - 1] into equal num_folds folds (last fold can be longer) and returns num_folds train-val
+       pairs of indexes.
+
+    Parameters:
+    num_objects (int): number of objects in train set
+    num_folds (int): number of folds for cross-validation split
+
+    Returns:
+    list((tuple(np.array, np.array))): list of length num_folds, where i-th element of list contains tuple of 2 numpy arrays,
+                                       the 1st numpy array contains all indexes without i-th fold while the 2nd one contains
+                                       i-th fold
